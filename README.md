@@ -1,5 +1,5 @@
 # Whale Funds Analysis
-The purpose of the whale funds analysis project is to leverage the power of Python along with the Pandas library and Jupyter lab to analyze portfolio risk and return and evaluate the performance of assets based on key-risk management metrics:
+The purpose of the whale funds analysis project is to leverage the power of Python along with the Pandas library and Jupyter lab to analyze portfolio risk and return of four whale funds against the S&P 500 and evaluate the performance of the assets based on key-risk management metrics:
 
 - Daily returns
 - Standard deviations
@@ -12,7 +12,7 @@ The visualizations generated from each quantitative analysis should allow us to 
 
 ## Technologies
 
-The crypto arbitrage analysis leverages Python 3.8+ and utilizes the following project libraries and dependencies:
+The whale funds analysis leverages Python 3.8+ and utilizes the following project libraries and dependencies:
 * [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) - a single integrated development environment (IDE) that allows you to write and run Python programs and review the results in one place
 * [Pandas](https://pandas.pydata.org/) - a software library designed for open source data analysis and manipulation
 - [matplotlib](https://matplotlib.org/) - library for creating visualizations in Python
@@ -32,10 +32,10 @@ Download Anaconda for your operating system and the latest Python version, run t
 ---
 
 ## Usage
-The crypto arbitrage analysis is hosted on the following GitHub repository at: https://github.com/nguyenthuyt/whale_analysis   
+The whale fund analysis is hosted on the following GitHub repository at: https://github.com/nguyenthuyt/whale_analysis   
 
 ### **Run instructions:**
-To run the crypto arbitrage analysis, simply clone the repository or download the files and launch the **risk_return_analysis.ipynb** in JupyterLab
+To run the whale fund arbitrage analysis, simply clone the repository or download the files and launch the **risk_return_analysis.ipynb** in JupyterLab
 
 To launch JupyterLab, follow these steps:
 
@@ -80,7 +80,7 @@ To confirm the data was imported properly, use the head and/or tail function to 
 ![JupyterLab notebook load data](images/collect_data.PNG)
 
 ### **Step 2: Prepare the data**
-Quantitative analysis involves evaluating the success or failure of an investment. This is completed by calculating the return on investment rather than analzying the prices as prices could be wildly different. In order to convert the DataFrame of prices to daily returns: 
+Quantitative analysis involves evaluating the success or failure of an investment. This is completed by calculating and comparing the return on investment rather than analzying the prices as prices could be wildly different from one asset to another. In order to convert the DataFrame of prices to daily returns: 
 
 - Type `df.pct_change()`. If NaN values exist, type `df.dropna()` to drop all NaN values. 
 
@@ -91,7 +91,7 @@ In this phase, graphical visualizations along with fund statistics will be gener
 
 *(Detailed instructions for calculating and plotting the various metrics can be found in the **risk_return_analysis.ipynb** file.)*
 
-- ANALYZE THE PERFORMANCE: Use the `plot` function to graph the daily return data and cumulative returns to determine whether any funds outperform the S&P 500.
+- ANALYZE THE PERFORMANCE: Use the `plot` and `cumprod` function to graph the daily return data and cumulative returns to determine whether any funds outperform the S&P 500.
 ![JupyterLab notebook daily returns](images/daily_returns.PNG)
 ![JupyterLab notebook cumulative returns](images/cumulative_returns.PNG)
 
