@@ -91,33 +91,32 @@ In this phase, graphical visualizations along with fund statistics will be gener
 
 *(Detailed instructions for calculating and plotting the various metrics can be found in the **risk_return_analysis.ipynb** file.)*
 
-- ANALYZE THE PERFORMANCE: Use the `plot` and `cumprod` function to graph the daily return data and cumulative returns to determine whether any funds outperform the S&P 500.
+- ANALYZE THE PERFORMANCE: 
+Use the `plot` and `cumprod` function to graph the daily return data and cumulative returns to determine whether any funds outperform the S&P 500.
 ![JupyterLab notebook daily returns](images/daily_returns.PNG)
 ![JupyterLab notebook cumulative returns](images/cumulative_returns.PNG)
 
 - ANALYZE THE VOLATILITY:
+Use `plot` with the `kind="Box"` parameter to visualize the daily return data for each of the four portfolios and the S&P 500. A side by side box graphical presentation of the funds provides a better visualization of which funds are the most and least volatile. Larger boxes, longer whiskers, and several outliers are indicators of being more volatile.
 ![JupyterLab notebook box plot S&P 500 and funds](images/volatility_sp500.PNG)
 ![JupyterLab notebook box plot funds only](images/volatility_funds.PNG)
 
 ANALYZE THE RISK:
+Use the pandas function `std` to calculate the standard deviation and annual standard deviation of the daily returns. Then, use the rolling window function to calcuate the rolling standard deviation for a 21-day rolling window. A higher standard deviation is typically representative of a higher risk asset and a lower standard deviation is typically representative of a lower risk asset. Use the `plot` function of the rolling standard deviation to determine which funds have similar movements with the S&P 500.
 ![JupyterLab notebook standard deviation S&P 500 and funds](images/21day_std.PNG)
 ![JupyterLab notebook standard deviation funds only](images/21day_std_funds.PNG)
 
 
 ANALYZE THE RISK-RETURN PROFILE:
+Using the annualized average return, calculate the Sharpe ratio for the four funds. The Sharpe ratio is calculated as the annualized average return over the annualized standard deviation. The Sharpe ratio takes into the risk and return profile of an asset. Using the `plot` function with the `kind=bar` parameter to visualize the risk-return profiles of the four funds and the S&P 500.
 ![JupyterLab notebook Sharpe ratios](images/sharpe_ratios.PNG)
 
 DIVERSIFY THE PORTFOLIO:
+An optimal portfolio would be one that is properly diversified and aligned with an investor's risk-profile. As such, a beta and covariance can assist with identifying assets that are sensitive to movements in the market and which assets provide the best balance of risk and return. Of the four funds, select two funds to calculate the 60-day rolling covariance and beta. Then, use the '`plot` function to graph the rolling covariance and beta and determine which fund has the most investment potential.  
 ![JupyterLab notebook rolling beta - Tiger Global Management](images/tiger_rolling_beta.PNG)
 ![JupyterLab notebook rolling beta - Berkshire Hathaway](images/bh_rolling_beta.PNG)
 
 
-
-
-
-
-### **Final analysis report:**
-Once the quantitative analyses have been completed and the summary statistics and supporting visualizations have been generated, summarize your key assumptions, findings, and conclusions. In the case of the whale fund analysis, 
 
 ### **Quit instructions:**
 After saving the file, from the menu bar, navigate to **'File'**, select **'Shutdown'** from the drop-down menu and confirm Shut Down.
